@@ -18,17 +18,11 @@ class TabAdapter(manager: FragmentManager, lifecycle: Lifecycle) :
         )
     }
 
-    //model concept class
     override fun getItemCount(): Int {
         return tabList.size
     }
 
     override fun createFragment(position: Int): Fragment {
-//        dice roller app polish
-//        when (position) {
-//            0 -> return AFragment()
-//            1 -> return BFragment()
-//        }
         return tabList[position].fragment
     }
 }
